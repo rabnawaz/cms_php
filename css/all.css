@@ -1,0 +1,17 @@
+.top_bar{
+    background: #f00;
+    color:#fff;
+    padding: 15px;
+}
+.man_nav{
+    margin-top:10px;
+}
+
+.post_section{
+    background:#ff8000;
+    color:#fff;
+}
+.side_bar{
+    background:#0040ff;
+    color:#fff;
+}
