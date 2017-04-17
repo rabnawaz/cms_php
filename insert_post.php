@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
         <label for="comment">Post Comment</label>
-          <textarea class="form-control" colsrow="20" name="content"></textarea>
+          <textarea class="form-control" colsrow="50" cols="40" name="content"></textarea>
         </div>
         <div class="form-group text-center">
           <input type="submit" class="btn btn-primary" name="submit" value="Publish Now">
@@ -52,25 +52,13 @@
 
 <?php
   include("includes/connect.php");
-  $target_dir = "uploads/";
-		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-		$uploadOk = 1;
-		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-		if ($uploadOk == 0) {
-		    echo "Sorry, your file was not uploaded.";
-		// if everything is ok, try to upload file
-		} else {
-		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-		    } else {
-		        echo "Sorry, there was an error uploading your file.";
-		    }
-		}
+
+		
 	if(isset($_POST['submit'])){
 		
 		$title = $_POST['title'];
-		$date = date('m/d/y');
+		$date = date('m-d-y');
 		$author = $_POST['author'];
 		$content = $_POST['content'];
 		$image_name = $_FILES['image']['name'];
@@ -82,11 +70,25 @@
 		// }
 		
 
-		// Check if $uploadOk is set to 0 by an error
+		$target_dir = "uploads/";
+		$target_file = $target_dir . basename($_FILES["image"]["name"]);
+		$uploadOk = 1;
+		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+		if ($uploadOk == 0) {
+		    echo "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+		} else {
+		    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+		        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+		    } else {
+		        echo "Sorry, there was an error uploading your file.";
+		    }
+		}
+
 		
 
-		$sql = "INSERT INTO posts (Post_title,Post_author,Post_content, Post_image) 
-		VALUES('$title','$author', '$content',$image_name)";
+		$sql = "INSERT INTO posts (Post_title,Post_author,Post_content, Post_image, Post_date)
+		VALUES('$title','$author', '$content','$image_name', '$date')";
 		if(!mysqli_query($connection,$sql)){
 			echo 'Not inserted data';
 		}
