@@ -12,6 +12,17 @@
 						<li><a href="#">About us</a></li>
 						<li><a href="#">Mission</a></li>
                     </ul>
+                    <div class="col-sm-4 pull-right">
+                    <form action="search.php" method="get">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                                <button class="btn btn-default" name="submit" type="submit">Search</button>
+                          </span>
+                          <input type="text" class="form-control" name="search" placeholder="Search for...">
+                        </div><!-- /input-group -->
+                    </form>
+                    </div>
                 </div>
+                
             </nav>
         </div>

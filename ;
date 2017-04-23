@@ -1,0 +1,24 @@
+PHP-cms-update form
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Sun Apr 23 17:20:50 2017 +0500
+#
+# On branch PHP_CMS
+# Your branch is up-to-date with 'origin/PHP_CMS'.
+#
+# Changes to be committed:
+#	modified:   admin/edit.php
+#	modified:   admin/index.php
+#	modified:   admin/view_post.php
+#	modified:   includes/header.php
+#	modified:   includes/nav.php
+#	modified:   includes/post_body.php
+#	modified:   includes/side_bar.php
+#	modified:   insert_post.php
+#	modified:   malala.sql
+#
+# Untracked files:
+#	malala-old.sql
+#

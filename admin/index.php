@@ -23,7 +23,7 @@
                 MANAGEMENT
             </h3>
             <ul class="nav nav-pills nav-stacked">
-                <li class=""><a href="view_posts.php">Admin Logout</a></li>
+                <li class=""><a href="view_post.php">Admin Logout</a></li>
                 <li><a href="view_post.php?view=view">View Posts</a></li>
                 <li><a href="insert_posts.php">Insert New Posts</a></li>
             </ul>

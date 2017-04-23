@@ -37,15 +37,15 @@
 				<td align="center" bgcolor="yellow" colspan="8">View All Posts</td>
 			</tr>
 			<tr>
-					<th>Post No</th>
-					<th>Post Title</th>
-					<th>Post Date</th>
-					<th>Post Author</th>
-					<th>Post Image</th>
-					<th>Post Content</th>
-					<th>Edit</th>
-					<th>Delete</th>
-				</tr>
+				<th>Post No</th>
+				<th>Post Title</th>
+				<th>Post Date</th>
+				<th>Post Author</th>
+				<th>Post Image</th>
+				<th>Post Content</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
 		<?php
 			include("../includes/connect.php");
 			$s = 1;
@@ -58,7 +58,7 @@
 					// echo "<pre>";
 					// print_r($row);
 					// echo "</pre>";
-					$post_id = $row['Post_id'];
+					$edit_id = $row['Post_id'];
 					$post_title = $row['Post_title'];
 					$post_date = $row['Post_date'];
 					$post_author = $row['Post_author'];
@@ -74,7 +74,7 @@
 					<td><?php echo $post_author;?></td>
 					<td><img src="../uploads/<?php echo $post_image;?>" width="80" height="80"></td>
 					<td><?php echo $post_content;?></td>
-					<td><a href="edit.php?id=<?php echo $post_id;?>">Edit</a></td>
+					<td><a href="edit.php?edit=<?php echo $edit_id;?>">Edit</a></td>
 					<td><a href="delete.php">Delete</a></td>
 				</tr>
 			

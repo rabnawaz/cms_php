@@ -19,8 +19,8 @@
 	</head>
 <body>
 <div class="container">
-    <form method="post" action="insert_post.php" enctype="multipart/form-data">
-    <h2>INsert Post Now</h2>
+    <form method="post" action="edit.php?$edit_form=<?php echo $edit_id; ?>" enctype="multipart/form-data">
+    	<h2>INsert Post Now</h2>
         <div class="form-group">
           <label for="title">Post Title</label>
           <input type="text" class="form-control" name="title">
