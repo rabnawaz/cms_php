@@ -75,7 +75,7 @@
 					<td><img src="../uploads/<?php echo $post_image;?>" width="80" height="80"></td>
 					<td><?php echo $post_content;?></td>
 					<td><a href="edit.php?edit=<?php echo $edit_id;?>">Edit</a></td>
-					<td><a href="delete.php">Delete</a></td>
+					<td><a href="delete.php?del=<?php echo $edit_id?>">Delete</a></td>
 				</tr>
 			
 
